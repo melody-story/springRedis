@@ -18,7 +18,8 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+	implementation 'org.springframework.session:spring-session-data-redis'  // session값을 redis에 저장하기 위함.
+	implementation 'org.springframework.boot:spring-boot-starter-data-redis' // spring에서 redis를 사용하기 위함.
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
