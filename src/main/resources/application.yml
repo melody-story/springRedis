@@ -1,6 +1,8 @@
 spring:
-  session:
-    storage-type: redis # session? ?? redis? ??? ? ?? ?.
+  cache:
+    type: redis
+#  session:
+#    storage-type: redis # session? ?? redis? ??? ? ?? ?.
   redis:
     host: localhost
     port: 6379
