@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Set;
 
 @Service
+@SuppressWarnings("unchecked")
 public class RankingService {
     /*
     * 1.점수등록
@@ -17,10 +18,11 @@ public class RankingService {
     * 3.특정 유저의 순위 조회
     * */
     private static final String LEADERBOARD_KEY= "leaderBoard";
+
     @Autowired
     StringRedisTemplate redisTemplate;
 
-    public boolean setUserScore(String userId, int score) {
+    public Boolean setUserScore(String userId, int score) {
         ZSetOperations zSetOps = redisTemplate.opsForZSet();
         zSetOps.add(LEADERBOARD_KEY, userId, score);
         return true;
